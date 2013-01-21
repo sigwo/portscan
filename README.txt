@@ -7,7 +7,7 @@ Uses 'while' to loop through ports, writing results to a file called "Results.cs
 of some sort, not sure which one yet.
 
 How to use:
-You will need Python 2.7 and the associated libraries. Double click "port-scan.py", input the IP or website you want to test (www.sigwo.com). 
+You will need Python 2.7 and the default libraries. Double click "port-scan.py", input the IP or website you want to test (www.sigwo.com). 
 As of now, there is no verification of what is entered. 
 
 On Windows, a cmd.exe window will appear, running the code through it. The lines are a way of showing it is still running and not hung. 
