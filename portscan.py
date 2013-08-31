@@ -33,7 +33,8 @@ timestart = datetime.datetime.today() #time the script started
 t1 = str(timestart)
 port = 0 #needs to be an int
 Freq = 2500 # Set Frequency To 2500 Hertz
-Dur = 1000 # Set Duration To 1000 ms == 1 second
+Dur = 500 # Set Duration To 1000 ms == 1 second
+
 while port <= 1024 : #max 65536
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print "....................."
