@@ -25,19 +25,22 @@
 import datetime
 import socket
 import sys
+import winsound
 #import subprocess
 #step in from port-scan.py
 host = raw_input("Please put in IP address: ")
 timestart = datetime.datetime.today() #time the script started
 t1 = str(timestart)
 port = 0 #needs to be an int
+Freq = 2500 # Set Frequency To 2500 Hertz
+Dur = 1000 # Set Duration To 1000 ms == 1 second
 while port <= 1024 : #max 65536
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print "....................."
     with open('results.csv', 'a') as f:
         f.write(t1)
         try:
-            s.settimeout(.187) #speeds things up
+            s.settimeout(.007) #speeds things up
             s.connect((host,port))
             value = ", %s,%s,OPEN\n" % (host, port)
             v = str(value)
@@ -46,6 +49,7 @@ while port <= 1024 : #max 65536
             s.shutdown(2)
             s.close()
             print "!!!!!!!!FOUND ONE!!!!!!!!!"
+			winsound.Beep(Freq,Dur)
             port += 1
             continue
         except:
