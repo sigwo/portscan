@@ -38,18 +38,18 @@ while port <= 1024 : #max 65536
     with open('results.csv', 'a') as f:
         f.write(t1)
         try:
-            s.settimeout(.007) #speeds things up
-            s.connect((host,port))
-            value = ", %s,%s,OPEN\n" % (host, port)
-            v = str(value)
-            f.write(v)
-            #s.bind((host,port)) for future use to deliver payload
-            s.shutdown(2)
-            s.close()
-            print "!!!!!!!!FOUND ONE!!!!!!!!!"
-			print '\a'
-            port += 1
-            continue
+			s.settimeout(.007) #speeds things up
+			s.connect((host,port))
+			value = ", %s,%s,OPEN\n" % (host, port)
+			v = str(value)
+			f.write(v)
+			#s.bind((host,port)) for future use to deliver payload
+			s.shutdown(2)
+			s.close()
+			print "!!!!!!!!FOUND ONE!!!!!!!!!"
+			print '\a' # beeps on open port
+			port += 1
+			continue
         except:
             value =  ", %s,%s,CLOSED\n" % (host, port)
             v = str(value)
