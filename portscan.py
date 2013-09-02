@@ -25,25 +25,23 @@
 import datetime
 import socket
 import sys
-#import subprocess
-#step in from port-scan.py
+
 host = raw_input("Please put in IP address: ")
 timestart = datetime.datetime.today() #time the script started
 t1 = str(timestart)
 port = 0 #needs to be an int
 
-while port <= 1024 : #max 65536
+while port <= 54 : #max 65536
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print "....................."
     with open('results.csv', 'a') as f:
         f.write(t1)
         try:
-			s.settimeout(.007) #speeds things up
+			s.settimeout(.05) #speeds things up
 			s.connect((host,port))
 			value = ", %s,%s,OPEN\n" % (host, port)
 			v = str(value)
 			f.write(v)
-			#s.bind((host,port)) for future use to deliver payload
 			s.shutdown(2)
 			s.close()
 			print "!!!!!!!!FOUND ONE!!!!!!!!!"
@@ -57,4 +55,3 @@ while port <= 1024 : #max 65536
             port += 1
             print "..CLOSED"
     f.closed
-#step back to port-scan.py
