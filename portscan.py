@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Raw TCP Port Scanner - Beta
+# Raw TCP Port Scanner - v0.3 Beta
 # 
 # Script by Steven Grove (@sigwo)
 #           www.sigwo.com
@@ -19,7 +19,7 @@
 # Raw TCP port scanner.
 #
 #
-# make the output go to file and pull that file into a GUI, load new window if payload is
+# make the output file (results.csv) and pull that file into a GUI, load new window if payload is
 # started, make a well known port scanner and complete port scanner, make an IP range selector
 #
 import datetime
@@ -31,7 +31,7 @@ timestart = datetime.datetime.today() #time the script started
 t1 = str(timestart)
 port = 0 #needs to be an int
 
-while port <= 1023 : #max 65536
+while port <= 65536 : #max 65536
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print "....................."
     with open('results.csv', 'a') as f:

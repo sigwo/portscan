@@ -1,5 +1,5 @@
 Port-Scan v0.3 BETA
-
+#
 # 
 # Script by Steven Grove (@sigwo)
 #           www.sigwo.com
@@ -21,7 +21,7 @@ of some sort, not sure which one yet.
 
 How to use:
 You will need Python 2.7 and the default libraries. Double click "port-scan.py", input the IP or website you want to test (www.sigwo.com). 
-As of now, there is no verification of what is entered. 
+As of now, there is no verification of what is entered. I am working on integrating the input checks.
 
 On Windows, a cmd.exe window will appear, running the code through it. The lines are a way of showing it is still running and not hung. 
 
