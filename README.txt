@@ -1,4 +1,4 @@
-Port-Scan v0.1 BETA
+Port-Scan v0.3 BETA
 
 # 
 # Script by Steven Grove (@sigwo)
