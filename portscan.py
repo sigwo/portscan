@@ -15,12 +15,13 @@
 #
 # 21Jan13 - Initial version
 # 09Mar13 - Added RPi compatibility. Renamed "Results.csv" to "results.csv"
+# 20Nov13 - Added sound beep on confirmed port open
 #
 # Raw TCP port scanner.
 #
-#
-# make the output file (results.csv) and pull that file into a GUI, load new window if payload is
-# started, make a well known port scanner and complete port scanner, make an IP range selector
+# What I'm working on...
+# make the output file (results.csv), load results for eventual payload delivery
+# make a well known port scanner and complete port scanner, make an IP range selector
 #
 import datetime
 import socket
