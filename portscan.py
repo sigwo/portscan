@@ -38,7 +38,7 @@ while port <= 65536 : #max 65536
     with open('results.csv', 'a') as f:
         f.write(t1)
         try:
-			s.settimeout(.1) #speeds things up
+			s.settimeout(.15) #speeds things up
 			s.connect((host,port))
 			value = ", %s,%s,OPEN\n" % (host, port)
 			v = str(value)
