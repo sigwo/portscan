@@ -27,7 +27,7 @@ import datetime
 import socket
 import sys
 
-host = raw_input("Please put in IP address: ")
+host = raw_input("Please put in IP address or domain name: ")
 timestart = datetime.datetime.today() #time the script started
 t1 = str(timestart)
 port = 0 #needs to be an int
